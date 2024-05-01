@@ -11,9 +11,7 @@ const Hero = () => {
           Our Responsibility
         </h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          tenetur doloremque molestias repellat minus asperiores in aperiam
-          dolor, quaerat praesentium.
+        At HealthSync, we are committed to prioritizing your health above all else. With our advanced booking system, we aim to streamline the process of scheduling appointments with healthcare professionals, ensuring that you receive the care you need when you need it most.
         </p>
       </div>
       <div className="hero-img">

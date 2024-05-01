@@ -36,7 +36,7 @@ const Appointments = () => {
     try {
       await toast.promise(
         axios.put(
-          "api/appointment/completed",
+          "/appointment/completed",
           {
             appointid: ele?._id,
             doctorId: ele?.doctorId?._id,
@@ -49,9 +49,9 @@ const Appointments = () => {
           }
         ),
         {
-          success: "Appointment booked successfully",
-          error: "Unable to book appointment",
-          loading: "Booking appointment...",
+          success: "Appointment Completed",
+          error: "Unable Update",
+          loading: "Updating appointment...",
         }
       );
 
