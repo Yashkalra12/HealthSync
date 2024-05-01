@@ -117,3 +117,5 @@ Welcome to our comprehensive healthcare platform! Our website offers a seamless 
 ---
 
 <br/>
+
+<p align="right"><a href="#top">Back to Top</a></p>
