@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "healthsync",
+  "version": "1.0.0",
+  "description": "Your Health Our Responsibility",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yashkalra12/HealthSync.git"
+  },
+  "author": "Yash Kalra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yashkalra12/HealthSync/issues"
+  },
+  "homepage": "https://github.com/Yashkalra12/HealthSync#readme"
+}
