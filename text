@@ -1,0 +1,12 @@
+CLOUD_API_KEY = 144462769876296
+CLOUD_API_SECRET = yumu8frRk25zbp2SxolgQVqPQAE
+CLOUD_USER_FOLDER =twitter
+CLOUD_POST_FOLDER = twitterposts
+CLIENT_URL = http://localhost:3000
+
+
+PORT =3002
+MONGODB_URL = mongodb://localhost:27017/twitter
+JWT_SECRET_KEY = yash
+JWT_EXPIRY = 60
+COOKIE_EXPIRE = 60
