@@ -41,7 +41,7 @@ const login = async (req, res) => {
       { userId: emailPresent._id, isAdmin: emailPresent.isAdmin },
       process.env.JWT_SECRET,
       {
-        expiresIn: "2 days",
+        expiresIn: "10 days",
       }
     );
     return res.status(201).send({ msg: "User logged in successfully", token });

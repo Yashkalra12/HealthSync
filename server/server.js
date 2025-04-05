@@ -19,6 +19,12 @@ app.use("/appointment", appointRouter);
 app.use("/notification", notificationRouter);
 app.use(express.static(path.join(__dirname, "./client/build")));
 
+// Endpoint to serve a modern HTML page
+app.get("/modern-page", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "modern.html"));
+});
+
+// Catch-all to serve React frontend
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
