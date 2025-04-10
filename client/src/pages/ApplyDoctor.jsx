@@ -26,6 +26,17 @@ const ApplyDoctor = () => {
 
   const btnClick = async (e) => {
     e.preventDefault();
+
+    if (formDetails.experience <= 0) {
+      toast.error("Experience must be a positive number.");
+      return;
+    }
+
+    if (formDetails.fees <= 0) {
+      toast.error("Fees must be a positive number.");
+      return;
+    }
+
     try {
       await toast.promise(
         axios.post(
@@ -48,7 +59,7 @@ const ApplyDoctor = () => {
 
       navigate("/");
     } catch (error) {
-      return error;
+      toast.error(error.response?.data?.message || "An error occurred");
     }
   };
 

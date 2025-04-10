@@ -35,6 +35,16 @@ const bookAppointment = async (req, res) => {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
+    // Fetch doctor details to verify doctorname
+    const doctor = await User.findById(doctorId);
+    if (!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+
+    if (doctor.firstname + " " + doctor.lastname !== doctorname) {
+      return res.status(400).json({ message: "Invalid doctor name" });
+    }
+
     const appointment = new Appointment({
       date,
       time,
@@ -79,6 +89,16 @@ const completeAppointment = async (req, res) => {
 
     if (!appointid || !doctorId || !doctorname) {
       return res.status(400).json({ message: "Missing required fields" });
+    }
+
+    // Fetch doctor details to verify doctorname
+    const doctor = await User.findById(doctorId);
+    if (!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+
+    if (doctor.firstname + " " + doctor.lastname !== doctorname) {
+      return res.status(400).json({ message: "Invalid doctor name" });
     }
 
     const appointment = await Appointment.findByIdAndUpdate(
